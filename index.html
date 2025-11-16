@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/script.js" defer></script>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-2">
+            Dashboard (Tutoriais de Construção)
+        </h1>
+        <p class="text-xl text-gray-500 mb-8">
+            Progresso da playlist de construções. (Salvo automaticamente)
+        </p>
+
+        <div id="metrics-dashboard" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-blue-500">
+                <p class="text-sm font-medium text-gray-500">Total de Projetos</p>
+                <p id="total-count" class="text-3xl font-bold text-gray-900 mt-1">0</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-green-500">
+                <p class="text-sm font-medium text-gray-500">Projetos Concluídos</p>
+                <p id="completed-count" class="text-3xl font-bold text-green-600 mt-1">0</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-amber-500">
+                <p class="text-sm font-medium text-gray-500">Projetos Pendentes</p>
+                <p id="pending-count" class="text-3xl font-bold text-amber-600 mt-1">0</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-indigo-500 flex flex-col justify-center">
+                <p class="text-sm font-medium text-gray-500">Taxa de Conclusão</p>
+                <p id="completion-rate" class="text-3xl font-bold text-indigo-600 mt-1">0%</p>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap items-center justify-between mb-4 border-b pb-2">
+            <h2 class="text-2xl font-semibold text-gray-800">
+                Lista de Construções
+            </h2>
+            <div class="flex space-x-3 mt-2 sm:mt-0">
+                <button id="save-json-btn" 
+                        class="px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-150">
+                    Salvar Progresso (JSON)
+                </button>
+                <input type="file" id="load-json-input" accept=".json" class="hidden">
+                <label for="load-json-input" 
+                       class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-150 cursor-pointer">
+                    Carregar Progresso
+                </label>
+            </div>
+        </div>
+        
+        <div id="item-list-container" class="bg-white p-6 rounded-xl shadow-lg">
+        </div>
+    </div>
+</body>
+</html>

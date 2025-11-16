@@ -1,0 +1,13 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f9fb;
+}
+
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: #3b82f6;
+}
