@@ -18,17 +18,37 @@
             Progresso da playlist de construções. (Salvo automaticamente)
         </p>
 
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">
+                Playlist de Referência
+            </h2>
+            <div class="relative w-full overflow-hidden rounded-xl shadow-xl" style="padding-top: 56.25%;">
+                <iframe 
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/videoseries?si=OEh9NROf6aXX7uCm&amp;list=PLtZBoAYwtOdZKep_vAQijvZwn0Lx-BmeP" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="text-center text-gray-400 mt-1">
+                <span>Canal da Playlist: Jazzghost</span>
+            </div>
+        </div>
+
         <div id="metrics-dashboard" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-blue-500">
-                <p class="text-sm font-medium text-gray-500">Total de Projetos</p>
+                <p class="text-sm font-medium text-gray-500">Total de Vídeos</p>
                 <p id="total-count" class="text-3xl font-bold text-gray-900 mt-1">0</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-green-500">
-                <p class="text-sm font-medium text-gray-500">Projetos Concluídos</p>
+                <p class="text-sm font-medium text-gray-500">Vídeos Concluídos</p>
                 <p id="completed-count" class="text-3xl font-bold text-green-600 mt-1">0</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-amber-500">
-                <p class="text-sm font-medium text-gray-500">Projetos Pendentes</p>
+                <p class="text-sm font-medium text-gray-500">Vídeos Pendentes</p>
                 <p id="pending-count" class="text-3xl font-bold text-amber-600 mt-1">0</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow-lg border-b-4 border-indigo-500 flex flex-col justify-center">
